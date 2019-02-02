@@ -71,8 +71,6 @@ $ajaxUtils.sendGetRequest(
 });
 // *** finish **
 function buildAndShowHomeHTML (categories) {
-
-  // Load home snippet page
   $ajaxUtils.sendGetRequest(
     homeHtmlUrl,
     function (homeHtml) {
@@ -111,8 +109,6 @@ function chooseRandomCategory (categories) {
   // return category object with that randomArrayIndex
   return categories[randomArrayIndex];
 }
-
-
 // Load the menu categories view
 dc.loadMenuCategories = function () {
   showLoading("#main-content");
@@ -120,8 +116,6 @@ dc.loadMenuCategories = function () {
     allCategoriesUrl,
     buildAndShowCategoriesHTML);
 };
-
-
 // Load the menu iteam
 // 'categoryShort' is a short_name for a category
 dc.loadMenuItems = function (categoryShort) {
@@ -130,8 +124,6 @@ dc.loadMenuItems = function (categoryShort) {
     menuItemsUrl + categoryShort,
     buildAndShowMenuItemsHTML);
 };
-
-
 // Builds HTML for the categories page based on the data
 // from the server
 function buildAndShowCategoriesHTML (categories) {
